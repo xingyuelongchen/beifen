@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta rel="icon" href="/favicon.ico">
+    <title>广艺舟_淘宝网店服务_电商平台入驻_电商综合服务www.guangyizhou.cn</title>
+    <meta name="keywords" content="电商平台入驻|个人开网店|淘宝店入驻|拼多多开店|淘宝店铺装修|网店培训|网店工具|网店服务|企业服务|货源分销|电商直播|短视频拍摄|淘宝装修|淘宝直播|淘宝服务">
+    <meta name="description" content="广艺舟_电商综合服务企业,提供淘宝网店培训、网店工具、入驻电商平台、货源分销、个人开网店、短视频拍摄等服务,为电商中小卖家提供多项服务技术支撑。">
+    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/swiper.css">
+    <script src="/assets/vue.js"></script>
+    <script src="/assets/swiper.js"></script>
+    <script src="/assets/vue-awesome-swiper.js"></script>
+    <script src="/assets/axios.js"></script>
+    <script src="/assets/index.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-head">
+            <div class="container menu">
+                <div class="logo">
+                    <h1 alt="广艺舟电商">
+                        <img src="/assets/logo.png" alt="广艺舟电商" />
+                    </h1>
+                </div>
+                <div class="nav">
+                    <a href="/index" class="nav-item router-link-exact-active active">首页</a>
+                    <a href="/about" class="nav-item">关于我们</a>
+                    <a href="/news" class="nav-item">新闻中心</a>
+                    <a href="/case" class="nav-item">成功案例</a>
+                    <a href="/service" class="nav-item">服务中心</a>
+                    <a href="/app.html" class="nav-item">App下载</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="body" style="font-size: 0;">
+            <style>
+                .body img {
+                    outline: none;
+                    margin: 0;
+                    padding: 0;
+
+                }
+
+                .body a {
+                    outline: none;
+                    text-decoration: none;
+                }
+            </style>
+            <a href="http://www.guangyizhou.cn/public/gyz1_0_0.apk" download="download">
+                <img src="./images/下载_01.jpg" alt="">
+            </a>
+            <img src="./images/下载_02.jpg" alt="">
+            <img src="./images/下载_03.jpg" alt="">
+            <img src="./images/下载_04.jpg" alt="">
+            <img src="./images/下载_05.jpg" alt="">
+            <img src="./images/下载_06.jpg" alt="">
+            <img src="./images/下载_07.jpg" alt="">
+        </div>
+        <div class="app-foot">
+            <div class="foot-wrap">
+                <div class="foot-one container">
+                    <div class="foot-content">
+                        <div class="foot-title">关于我们</div>
+                        <div class="foot-text">
+                            公司拥有一支有多年电商服务资深经验的管理团队和专业的服务团队，凭借多
+                            年积累的电商行业实践经验，致力于解决电商中小卖家的需求，为电商中小卖
+                            家提供一站式，系统化的服务方案。
+                            <br />
+                            <br />地址：中国四川省成都市高新区蜀锦路88号
+                            <br />版权所有 © 四川广艺舟科技有限公司 保留一切权利
+                            <br />网站备案： 蜀ICP备20010706号
+                            <br />
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">我们的服务</div>
+                        <div class="foot-text">
+                            <div>广艺舟开店技巧</div>
+                            <div>开店教学培训</div>
+                            <div>网店货源</div>
+                            <div>网店装修</div>
+                            <div>店铺美化</div>
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">标签</div>
+                        <div class="foot-text">
+                            <span>培训</span>
+                            <span>网店</span>
+                            <span>视频</span>
+                            <span>一站式服务</span>
+                            <span>创业孵化</span>
+                            <span>电商</span>
+                            <span>装修</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-two container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.use(window.VueAwesomeSwiper)
+        const app = new Vue({
+            el: '#app',
+            data: {
+                nav: "book",
+                new: [{ pic: '', title: '' }],
+                form: {
+                    mobile: null,
+                    name: '',
+                    text: ''
+                },
+            },
+            methods: {
+                async submit() {
+                    let { data } = await axios(window.url + '/api/Index/Leaving', {
+                        method: 'post',
+                        data: this.form
+                    })
+                    if (data.code) {
+                        alert(data.msg)
+                        this.form = {}
+                    }
+                },
+            }
+        })
+    </script>
+
+
+</html>

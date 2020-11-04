@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta rel="icon" href="/favicon.ico">
+    <title>成功案例__淘宝网店服务_网店货源分销_网店服务_广艺舟电商综合服务www.guangyizhou.cn</title>
+    <meta name="description" content="广艺舟多年网店服务及电商企业服务优质案例展示，提供网店服务、电商综合性服务、淘宝装修等经典案例展示。">
+    <meta name="keywords" content="网店培训|网店工具|网店服务|企业服务|货源分销|电商直播|短视频拍摄|淘宝装修|淘宝直播|淘宝服务">
+    <script src="/assets/vue.js"></script>
+    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/element.css">
+    <script src="/assets/axios.js"></script>
+    <script src="/assets/element.js"></script>
+    <script src="/assets/index.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-head">
+            <div class="container menu">
+                <div class="logo">
+                    <img src="/assets/logo.png" alt="logo" />
+                </div>
+
+                <div class="nav">
+                    <a href="/" class="nav-item  ">首页</a>
+                    <a href="/about" class="nav-item ">关于我们</a>
+                    <a href="/news" class="nav-item ">新闻中心</a>
+                    <a href="/case" class="nav-item">成功案例</a>
+                    <a href="/service" class="nav-item">服务中心</a>
+                </div>
+            </div>
+        </div>
+        <div class="details container">
+            <div class="crumbs">
+                <a href="/">首页</a>
+                <a href="#">
+                    <!-- 当前新闻标题 -->
+                </a>
+            </div>
+            <div class="title">
+                <div class="main">
+                    <!-- 标题 -->
+                </div>
+                <div class="subtitle">
+                    <span>阅读：
+                        <!-- 阅读数 -->
+                    </span>
+                    <span>作者：
+                        <!-- 作者 -->
+                    </span>
+                    <span>日期：
+                        <!-- 时间 -->
+                    </span>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <!-- 文章内容 -->
+                </div>
+                <p>版权声明：部分文章源于网络，如有侵权，请联系删除，谢谢。</p>
+            </div>
+            <div class="info">
+                <span>上一篇：
+                    <!-- 上一篇 -->
+                    <a href=""> </a>
+                </span>
+                <span>下一篇：
+                    <!-- 下一篇 -->
+                    <a href=""> </a>
+                </span>
+            </div>
+            <div class="tui">
+                <span>推荐文章：</span>
+                <div>
+                    <!-- 推荐列表 -->
+                    <a href="">
+                        <!-- 标题 -->
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="app-foot">
+            <div class="foot-wrap">
+                <div class="foot-one container">
+                    <div class="foot-content">
+                        <div class="foot-title">关于我们</div>
+                        <div class="foot-text">
+                            公司拥有一支有多年电商服务资深经验的管理团队和专业的服务团队，凭借多
+                            年积累的电商行业实践经验，致力于解决电商中小卖家的需求，为电商中小卖
+                            家提供一站式，系统化的服务方案。
+                            <br />
+                            <br />地址：中国(四川)自由贸易试验区成都高新区吉瑞三路99号1幢4单元16层
+                            <br />版权所有 © 四川广艺舟科技有限公司 保留一切权利
+                            <br />网站备案： 蜀ICP备19028568号-1
+                            <br />
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">我们的服务</div>
+                        <div class="foot-text">
+                            <div>广艺舟开店技巧</div>
+                            <div>开店教学培训</div>
+                            <div>网店货源</div>
+                            <div>网店装修</div>
+                            <div>店铺美化</div>
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">标签</div>
+                        <div class="foot-text">
+                            <span>培训</span>
+                            <span>网店</span>
+                            <span>视频</span>
+                            <span>一站式服务</span>
+                            <span>创业孵化</span>
+                            <span>电商</span>
+                            <span>装修</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let Pagination = ELEMENT.Pagination;
+        const app = new Vue({
+            el: '#app',
+            components: { Pagination },
+            data: {
+                page: {
+                    limit: 1,
+                    page: 0,
+                    total: 0
+                },
+                icon: [
+                    // { icon: "/assets/icon/tb1.png", title: "Facebook" },
+                    // { icon: "/assets/icon/tb2.png", title: "Twitter" },
+                    // { icon: "/assets/icon/tb3.png", title: "Google" },
+                    // { icon: "/assets/icon/tb4.png", title: "LinkedIn" },
+                    // { icon: "/assets/icon/tb5.png", title: "Youtube" },
+                    // { icon: "/assets/icon/tb6.png", title: "Skype" }
+                ],
+                content: {
+                    prev: { href: '#', title: '暂无' },
+                    next: { href: '#', title: '暂无' },
+                    count: 0,
+                    title: null,
+                    content: null,
+                    author: null,
+                    date: null
+                },
+                id: null,
+            },
+            created() {
+                this.getData()
+            },
+            methods: {
+                async getData() {
+                    let query = window.location.search;
+                    let { data } = await axios(window.url + '/api/Newes/detail' + query)
+                    if (data.code) {
+                        if (data.code) {
+                            let prev = data.data.pre_info && query.replace(/id=.*&/, 'id=' + data.data.pre_info.id + '&') || '#';
+                            let next = data.data.next_info && query.replace(/id=.*&/, 'id=' + data.data.next_info.id + '&') || '#';
+                            this.content = {
+                                prev: { href: prev, title: data.data.pre_info && data.data.pre_info.title || '暂无' },
+                                next: { href: next, title: data.data.next_info && data.data.next_info.title || '暂无' },
+                                count: data.data.data.volume,
+                                title: data.data.data.title,
+                                content: data.data.data.content,
+                                author: data.data.data.uid,
+                                date: data.data.data.update_time,
+                                tui: data.data.topping.map(e => {
+                                    return {
+                                        href: query.replace(/id=.*&/, 'id=' + e.id + '&'),
+                                        title: e.title
+                                    }
+                                })
+                            };
+
+
+                        }
+
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

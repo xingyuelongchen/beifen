@@ -1,0 +1,163 @@
+$(function () {
+	var Application = {
+		boxTopArray:[909,2349,3157,6367,9379],
+		actions:function () {
+			var _this = this;
+			//导航
+			layui.use(['carousel', 'element'], function(){
+				var carousel = layui.carousel;
+			  	carousel.render({
+				    elem: '#team',
+				    width: '1200px',
+				    height: '670px',
+				    interval:5000
+				});
+			});
+  			$('.layui-nav-more').remove();
+  			//添加动画
+		    var wow = new WOW({  
+		       boxClass: 'wow',  
+		       animateClass: 'animated',  
+		       offset: 100,    
+		       live: true
+		    });  
+		    wow.init(); 
+		    //3D轮播
+			$('.shop-show').roundabout({
+				 autoplay: true,
+				 autoplayDuration:2000,
+		    	 autoplayPauseOnHover: true,
+		    	 enableDrag: true,
+		    	 duration: 1000
+			});
+
+		  	//楼层点击导航
+			$('.layui-nav').on('click', 'li', function(event) {
+				var index = $(this).index();
+				var top = $('.box').eq(index).offset().top;
+				$("html,body").animate({scrollTop:top},400);
+			});
+
+  			//tab切换
+  			$('.tab-list').on('click', '.tab-btn', function(event) {
+  				var index = $(this).data('index') - 0;
+  				var bgColor = $(this).data('bgcolor');
+  				//按钮背景色切换
+  				$('.tab-current').removeClass('tab-current');
+  				$(this).css('background',bgColor).addClass('tab-current');
+  				$(this).css('background',bgColor).siblings('.tab-btn').css('background','none');
+  				//箭头切换
+  				$('.arrow-current').removeClass('arrow-current');
+  				$(this).next().addClass('arrow-current');
+  				//手指波纹
+  				$('.hand-box').hide().eq(index).show();
+  				//内容切换
+  				var li = $('.tab-content li').eq(index);
+  				li.fadeIn().siblings('li').fadeOut();
+  				for (var i = 0; i < li.find('img').length; i++) {
+  					var img = li.find('img').eq(i);
+  					var animateclass = img.data('animateclass');
+  					img.addClass(animateclass);
+  				}
+  			});
+
+			//回到顶部
+			$(".to-top").click(function () {
+		        $('body,html').animate({ scrollTop: 0 }, 400);
+		 	});
+
+			//楼层点击导航
+			$('.floor-nav').on('click', 'li', function(event) {
+				$('.floor-current').removeClass('floor-current');
+				var index = $(this).addClass('floor-current').index();
+				var top = $('.box').eq(index).offset().top;
+				$("html,body").animate({scrollTop:top},200);
+			});
+	
+			//楼层滚动导航
+		 	$(window).scroll(function(event) {
+		 		var windowTop =  $(document).scrollTop();
+		 		if(windowTop < $('.box-1').offset().top - 400) {
+		 			$('.floor-nav').hide('300');
+		 			return;
+		 		} else {
+					$('.floor-nav').show('300');
+		 		}
+		 	
+		 		//判断高度
+		 		for (var i = 0; i < _this.boxTopArray.length; i++) {
+		 			var top = $('.box').eq(i).height() * 0.8;
+		 			if (windowTop <= _this.boxTopArray[i] + top) {
+		 				$('.floor-current').removeClass('floor-current');
+		 				$('.floor-nav li').eq(i).addClass('floor-current');
+		 				break;
+		 			}
+		 		}
+		 	});	
+		 	//关闭底部广告
+		 	$('.adv-close').click(function() {
+		 		$(this).toggleClass('rotate');
+		 		if (!$('.adv-box').is(':animated')){
+		 			$('.adv-box').slideToggle();
+		 		}
+		 	});
+
+		 	//播放视频
+		 	var Media = document.getElementById("media"); 
+			//打开视频
+			$('.video-btn').click(function() {
+				var src = $(this).data('src');
+				$('.video-mask video').attr('src',src);
+				$('.video-mask').fadeIn('fast');
+				Media.play();
+			});
+			//关闭视频
+			$('.video-mask').click(function() {
+				Media.currentTime = 0;
+				Media.pause();
+				$(this).fadeOut('fast');
+			});
+			//视频点击
+			$('.video-mask video').click(function(e) {
+				e.stopPropagation();
+				if (!Media.paused) {
+					Media.pause();
+				} else {
+					Media.play();
+				}
+			});
+		},
+		//获取各模块到顶部的距离
+		getBoxTop:function () {
+			for (var i = 0; i < $('.box').length; i++) {
+				var top = $('.box').eq(i).show().offset().top;
+				this.boxTopArray.push(top);
+			}
+		},
+		//切换点击按钮
+		swichBtn:function () {
+			var i = 0;
+			setInterval(function () {
+				if (i == 2) {
+					i = 0;
+				}
+				$('.box-6 img').eq(i).show().siblings('img').hide();
+				i ++;
+			},500)
+		},
+		//禁止右键
+		noRightMouseDowm:function () {
+			document.oncontextmenu = function(){
+			    return false;
+			}
+		},
+		init:function () {
+			//激活事件
+			this.actions();
+			//this.getBoxTop();
+			this.swichBtn();
+			this.noRightMouseDowm();
+		}
+	}
+	Application.init();
+})

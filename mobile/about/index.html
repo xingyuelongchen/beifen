@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta rel="icon" href="/favicon.ico">
+    <meta rel="icon" href="/favicon.ico">
+    <title>关于我们_淘宝店铺培训_货源分销_网店服务_广艺舟电商综合服务www.guangyizhou.cn</title>
+    <meta name="keywords" content="网店培训|网店工具|网店服务|企业服务|货源分销|电商直播|短视频拍摄|淘宝装修|淘宝直播|淘宝服务|">
+    <meta name="description" content="广艺舟为电商中小卖家提供多项服务技术支撑，包含有网店培训、网店工具、网店服务、企业服务、货源分销、电商直播、短视频拍摄七大服务板块">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/vant.css">
+    <link rel="stylesheet" href="/assets/css/swiper.css">
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/vue.js"></script>
+    <script src="/assets/js/axios.js"></script>
+    <script src="/assets/js/vant.js"></script>
+    <script src="/assets/js/swiper.js"></script>
+    <script src="/assets/js/vue-awesome-swiper.js"></script>
+</head>
+
+<body>
+    <div id="app" class="index">
+        <van-popup closeable v-model="show" round position="top" :style="{ height: '50%' }">
+            <div class="nav">
+                <a href="/">首页</a>
+                <a href="/case">成功案例</a>
+                <a href="/news">新闻中心</a>
+                <a href="/about">关于我们</a>
+                <a href="http://s.guangyizhou.cn">服务中心</a>
+            </div>
+        </van-popup>
+        <div class="header container">
+            <div class="logo">
+                <a href="/">
+                    <img src="/assets/image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <van-icon name="wap-nav" @click="show=true" />
+            </div>
+        </div>
+        <div class="banner">
+            <img src="/assets/image/about_banner1.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="atitle">
+                <div class="main-title">关于我们</div>
+                <div class="main-title-sub">开网店选广艺舟中国专业的电商服务平台 <br /> 让天下没有难开的的店</div>
+                <div class="main-title-bottom"></div>
+            </div>
+            <div class="about">
+                <div class="img">
+                    <img src="../assets/image/about_a.jpg" alt />
+                </div>
+                <div class="text">
+                    <div>关于广艺舟</div>
+                    <div>
+                        公司拥有一支有多年电商服务资深经验的管理团队和专业的服务团队，凭借多年积累的电商行业实践经验，致力于解决电商中小卖家的需求，为电商中小卖家提供多项服务技术支撑，包含有网店培训、网店工具、网店服务、企业服务、货源分销、电商直播、短视频拍摄七大服务板块，为电商中小卖家提供一站式，系统化的服务方案。我们不断倾听和满足用户需求，用技术+服务的方式让企业与用户更加紧密的联系在一起，让互联网+更简单；
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="link">
+                <span>开店技巧</span>
+                <span>教学培训</span>
+                <span>电商服务</span>
+                <span>网店货源</span>
+                <span>网店装修</span>
+                <span>套餐培训</span>
+                <span>店铺美化</span>
+                <span>视频教程</span>
+            </div>
+            <div class="tel">
+                <div>投诉电话：400-601-5760转3</div>
+                <div>投诉邮箱：tousu@guangyizhou.com</div>
+            </div>
+            <div class="line"> </div>
+            <div class="copyright">
+                <div> 版权所有&copy;四川广艺舟科技有限公司 保留一切权利 </div>
+                <div> 网站备案： 蜀ICP备19028568号-1 </div>
+            </div>
+            <div class="foot-two container">
+                <template v-for="(item,index) in icon">
+                    <div class="icon" :key="index">
+                        <img :src="item.icon" :alt="item.title" />
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    Vue.use(window.VueAwesomeSwiper)
+    new Vue({
+        el: '#app',
+        data: {
+            icon: [
+                // { icon: "/assets/image/icon/tb1.png", title: "Facebook" },
+                // { icon: "/assets/image/icon/tb2.png", title: "Twitter" },
+                // { icon: "/assets/image/icon/tb3.png", title: "Google" },
+                // { icon: "/assets/image/icon/tb4.png", title: "LinkedIn" },
+                // { icon: "/assets/image/icon/tb5.png", title: "Youtube" },
+                // { icon: "/assets/image/icon/tb6.png", title: "Skype" }
+            ],
+            news: [],
+            show: false,
+        },
+        created() {
+            this.getData();
+        },
+        filters: {
+            htmlTotext(a) {
+                let dom = document.createElement('div');
+                dom.innerHTML = a;
+                let text = dom.innerText;
+                dom.style.display = 'none';
+                document.body.append(dom)
+                document.body.removeChild(dom)
+                return text;
+            }
+        },
+        methods: {
+            async getData() {
+                let { data } = await axios(url + '/api/Cases/lists');
+                if (data.code) {
+                    this.news = data.data
+                }
+            }
+        }
+
+    })
+</script>
+
+</html>

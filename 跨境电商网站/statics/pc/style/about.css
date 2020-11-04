@@ -1,0 +1,333 @@
+.about_banner {
+    width: 100%;
+    height: 580px;
+    background: url("../images/about/about_banner.jpg") no-repeat center top;
+}
+
+.about_content {
+    background: #f7f9f9;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.about_content .pic {
+    width: 484px;
+    margin-right: 35px;
+    float: left;
+    overflow: hidden;
+}
+
+.about_content .content{
+    width: 675px;
+    height: 270px;
+    float: right;
+}
+.about_content .content div{
+    overflow-y: scroll;
+    height: 245px;
+}
+.about_content .content h3 {
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+.about_content .content h3 span {
+    font-size: 16px;
+    color: #bababa;
+    margin-left: 10px;
+}
+
+.about_content .content p {
+    font-size: 14px;
+    color: #504f4f;
+    margin-top: 20px;
+    text-indent: 2em;
+    line-height: 23px;
+    letter-spacing: 0.08em;
+}
+
+.about_video .tit {
+    text-align: center;
+    overflow: hidden;
+}
+
+.about_video .tit img {
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.about_video .video_brand {
+    display: block;
+    margin: -30px auto 30px;
+    text-align: center;
+    position: relative;
+}
+
+.video_brand .video_bg {
+    position: absolute;
+    width: 940px;
+    height: 540px;
+    left: 50%;
+    top: 0;
+    margin-left: -470px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.video_brand .video_bg img {
+    width: 56px;
+    height: 68px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+}
+
+.head_title {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.head_title img {
+    display: block;
+    margin: 10px auto;
+}
+
+.head_title p {
+    color: #a8a8a8;
+    font-size: 16px;
+}
+
+.fzlc {
+    overflow: hidden;
+}
+
+.fzlc .fzlc_list {
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    background: url(../images/about/fzlc_bg.png) no-repeat center top;
+}
+
+.fzlc .fzlc_list .circle {
+    display: inline-block;
+    color: #fff;
+    margin-right: 90px;
+    margin-top: 30px;
+}
+
+.fzlc .fzlc_list .circle:last-child {
+    margin-right: 0;
+}
+
+.fzlc .fzlc_list .circle span {
+    display: block;
+}
+
+.fzlc .fzlc_list .circle span.clr {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: relative;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+}
+
+.fzlc .fzlc_list .circle.on span.clr:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.fzlc .fzlc_list .circle .line {
+    position: absolute;
+    width: 101px;
+    height: 1px;
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    left: 26px;
+    top: 50%;
+}
+
+.fzlc .fzlc_list .circle:last-child .line {
+    display: none;
+}
+
+.fzlc .fzlc_txt .content {
+    width: 484px;
+    margin: 20px auto;
+    display: none;
+    min-height: 120px;
+}
+
+.fzlc .fzlc_txt .content.on {
+    display: block;
+}
+
+.fzlc .fzlc_txt .content strong {
+    font-size: 30px;
+    color: #181818;
+    width: 100%;
+    display: block;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 10px;
+}
+
+.business {
+    background: #fcfcfc;
+    overflow: hidden;
+}
+
+.business ul {
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 822px;
+
+    margin-bottom: 30px;
+}
+
+.business ul li {
+    float: left;
+    margin-right: 68px;
+    width: 110px;
+    height: 184px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.business ul li:last-child {
+    margin-right: 0;
+}
+
+.business ul li .bus_cir {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 184px;
+}
+
+.business ul li .tit {
+    width: 84px;
+    height: 84px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: url(../images/about/bus_cir.png) no-repeat center top;
+    line-height: 84px;
+    font-size: 24px;
+    color: #fff;
+    margin: 0 auto;
+
+}
+
+.business ul li .num {
+    font-size: 20px;
+    margin-top: 10px;
+    display: block;
+    color: #2e2e2e;
+}
+
+.business ul li .bus_fk {
+    position: absolute;
+    top: 184px;
+    left: 0;
+    width: 110px;
+    height: 184px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.business ul li .bus_fk .txt {
+    width: 110px;
+    height: 184px;
+    background: url(../images/about/bus_fk.png) no-repeat center top;
+    font-size: 20px;
+    color: #fff;
+    padding: 15px;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.business ul li:hover .bus_cir {
+    top: -184px;
+    transition: all 0.3s;
+}
+
+.business ul li:hover .bus_fk {
+    top: 0;
+}
+
+.team {
+    overflow: hidden;
+}
+
+.w35 {
+    width: 35%;
+    text-align: right;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+.w35 img{
+    float: right;
+    margin-top: 40px;
+}
+.team ul{
+    margin-left: 4%;
+    margin-top: 20px;
+    max-width: 60%;
+}
+.team ul li{
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #4a4a4a;
+    letter-spacing: 1.5px;
+}
+.team ul li:before{
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(-45deg, #f88680 , #f8ba57);
+    background: -o-linear-gradient(-45deg, #f88680, #f8ba57);
+    background: -moz-linear-gradient(-45deg, #f88680, #f8ba57);
+    background: linear-gradient(-45deg,#f88680, #f8ba57);
+    border-radius: 50%;
+
+}
+.spirit{
+    padding-bottom: 40px;
+    position: relative;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    background-image: url(../images/about/right.png);
+    right: -45px;
+    left: auto;
+	outline:none;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    background-image: url(../images/about/left.png);
+    left: -45px;
+	outline:none;
+    right: auto;
+}

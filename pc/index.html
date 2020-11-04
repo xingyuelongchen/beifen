@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta rel="icon" href="/favicon.ico">
+    <title>广艺舟_淘宝网店服务_电商平台入驻_电商综合服务www.guangyizhou.cn</title>
+    <meta name="keywords" content="电商平台入驻|个人开网店|淘宝店入驻|拼多多开店|淘宝店铺装修|网店培训|网店工具|网店服务|企业服务|货源分销|电商直播|短视频拍摄|淘宝装修|淘宝直播|淘宝服务">
+    <meta name="description" content="广艺舟_电商综合服务企业,提供淘宝网店培训、网店工具、入驻电商平台、货源分销、个人开网店、短视频拍摄等服务,为电商中小卖家提供多项服务技术支撑。">
+    <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="/assets/swiper.css">
+    <script src="/assets/vue.js"></script>
+    <script src="/assets/swiper.js"></script>
+    <script src="/assets/vue-awesome-swiper.js"></script>
+    <script src="/assets/axios.js"></script>
+    <script src="/assets/index.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-head">
+            <div class="container menu">
+                <div class="logo">
+                    <h1 alt="广艺舟电商">
+                        <img src="/assets/logo.png" alt="广艺舟电商" />
+                    </h1>
+                </div>
+                <div class="nav">
+                    <a href="/index" class="nav-item router-link-exact-active active">首页</a>
+                    <a href="/about" class="nav-item">关于我们</a>
+                    <a href="/news" class="nav-item">新闻中心</a>
+                    <a href="/case" class="nav-item">成功案例</a>
+                    <a href="/service" class="nav-item">服务中心</a>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="banner">
+                <swiper class="banner-item" :options="{loop:true,autoplay:true}">
+                    <!-- <template v-for="(item,index) in banner"> -->
+                    <swiper-slide>
+                        <div class="banner-img">
+                            <img src="/assets/banner/a.png" alt />
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="banner-img">
+                            <img src="/assets/banner/b.png" alt />
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="banner-img">
+                            <img src="/assets/banner/c.png" alt />
+                        </div>
+                    </swiper-slide>
+                    <!-- </template> -->
+                </swiper>
+            </div>
+            <div class="wh container">
+                <div class="title">
+                    <div class="title-top">实力企业
+                        <span style="color: #ea5935;"> 品牌保证 </span>
+                    </div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                        <!-- <span>让天下没有难开的店</span> -->
+                    </div>
+                    <div class="title-bottom"></div>
+                </div>
+                <div class="one-wrap">
+
+                    <div class="one-content">
+                        <div class="index-one-icon">
+                            <img src="/assets/icon/sl4.png" alt="item.title" />
+                        </div>
+                        <div class="index-one-title">实战经验</div>
+                        <div class="index-one-sub">
+                            <div class="a">深厚技术</div>
+                            <div class="b">Deep technology</div>
+                        </div>
+                    </div>
+                    <div class="one-content">
+                        <div class="index-one-icon">
+                            <img src="/assets/icon/sl3.png" alt="item.title" />
+                        </div>
+                        <div class="index-one-title">1000万注册资金</div>
+                        <div class="index-one-sub">
+                            <div class="a">实力雄厚</div>
+                            <div class="b">Exclusive shops</div>
+                        </div>
+                    </div>
+                    <div class="one-content">
+                        <div class="index-one-icon">
+                            <img src="/assets/icon/sl2.png" alt="item.title" />
+                        </div>
+                        <div class="index-one-title">品牌推广</div>
+                        <div class="index-one-sub">
+                            <div class="a">淘宝专业老店</div>
+                            <div class="b">Exclusive shops</div>
+                        </div>
+                    </div>
+                    <div class="one-content">
+                        <div class="index-one-icon">
+                            <img src="/assets/icon/sl1.png" alt="item.title" />
+                        </div>
+                        <div class="index-one-title">广艺舟</div>
+                        <div class="index-one-sub">
+                            <div class="a">注册商标</div>
+                            <div class="b">Registered trademark</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="wh">
+                <img src="/assets/image/home1.jpg" style="width: 100%;">
+            </div>
+            <div class="wh container">
+                <div class="title">
+                    <div class="title-top">电商服务 <span>安心放心 </span></div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                        <!-- <span>让天下没有难开的店</span> -->
+                    </div>
+                    <!-- <div class="title-bottom"></div> -->
+                </div>
+                <div class="three-wrap">
+                    <div class="three-content" style="background:#ea5935">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw1.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">品牌打造</div>
+                        <div class="index-three-sub">
+                            <div class="a">多家品牌商合作，打造专属品牌</div>
+                        </div>
+                    </div>
+                    <div class="three-content" style="background:#41b4f1">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw2.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">辅助运营</div>
+                        <div class="index-three-sub">
+                            <div class="a">精英讲师手把手教学，全程辅助运营，快速提升业绩</div>
+                        </div>
+                    </div>
+                    <div class="three-content" style="background:#33b8bb">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw3.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">课程培训</div>
+                        <div class="index-three-sub">
+                            <div class="a">体系化课程金牌讲师系统教学</div>
+                        </div>
+                    </div>
+                    <div class="three-content" style="background:#29b296">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw4.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">精选货源</div>
+                        <div class="index-three-sub">
+                            <div class="a">多家精选货源商签约合作 万款产品厂家直发</div>
+                        </div>
+                    </div>
+                    <div class="three-content" style="background:#1da4cf">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw5.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">内容策划</div>
+                        <div class="index-three-sub">
+                            <div class="a">资深策划团队定制专属创意 视频内容</div>
+                        </div>
+                    </div>
+                    <div class="three-content" style="background:#eda822">
+                        <div class="index-three-icon">
+                            <img src="/assets/icon/fw6.png" alt="item.title" />
+                        </div>
+                        <div class="index-three-title">数据分析</div>
+                        <div class="index-three-sub">
+                            <div class="a">通过大数据解析市场行情优化 店铺打造爆款</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="book">
+                <div class="title">
+                    <div class="title-top">荣誉证书 <span>值得信赖 </span></div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                        <!-- <span>让天下没有难开的店</span> -->
+                    </div>
+                    <!-- <div class="title-bottom"></div> -->
+                </div>
+                <div class="box">
+                    <swiper :options="{loop:true,autoplay:true, slidesPerView: 3,
+                        spaceBetween: 0,
+                        centeredSlides: true,}">
+                        <template v-for="(item,index) in 12">
+                            <swiper-slide>
+                                <div class="banner-img">
+                                    <img :src="'/assets/image/'+(index+1)+'.png'" alt />
+                                </div>
+                            </swiper-slide>
+                        </template>
+                    </swiper>
+                </div>
+            </div>
+            <div class="dao">
+                <div class="title">
+                    <div class="title-top">专业导师 <span>服务保证 </span></div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                        <!-- <span>让天下没有难开的店</span> -->
+                    </div>
+                    <!-- <div class="title-bottom"></div> -->
+                </div>
+                <div class="box">
+                    <swiper :options="{loop:true,autoplay:true, slidesPerView: 4,
+                        spaceBetween: 0,
+                        centeredSlides: true,}">
+                        <template v-for="(item,index) in 8">
+                            <swiper-slide>
+                                <div class="banner-img">
+                                    <img :src="'/assets/image/d'+(index+1)+'.png'" alt />
+                                </div>
+                            </swiper-slide>
+                        </template>
+                    </swiper>
+                </div>
+            </div>
+            <div class=" tao">
+                <div class="title">
+                    <div class="title-top">钜惠套餐 <span>实战教程 </span></div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                    </div>
+                </div>
+                <div class="content container">
+                    <div class="item">
+                        <div class="name">精英版</div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="/assets/icon/jy.png" alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div>图文+在线课程,包含所有开店基础设置 </div>
+                                <div>98节基础推广教学视频</div>
+                                <div>对接2种精选货源渠道 </div>
+                                <div>PC端+无线端百种主题风格选择</div>
+                                <div>基础教学助您新店快速成长</div>
+                                <div>新手入门推广教学,轻松引流</div>
+                                <div>标题优化、上下架优化、产品结构优化</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">豪华版</div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="/assets/icon/hh.png" alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div>图文+在线课程,包含所有开店基础设置 </div>
+                                <div>98节基础推广教学视频</div>
+                                <div>对接3种精选货源渠道 </div>
+                                <div>PC端+无线端百种主题风格选择</div>
+                                <div>站内基础推广教学+站内高级营销教学</div>
+                                <div>多渠道推广方式，提升店铺迅速出单</div>
+                                <div>指导店铺设置优化更全面,曝光率更好</div>
+                                <div>淘宝直播开通教学,卖货新方式,拓展新客流</div>
+                                <div>智能客服接待,自动回复客户信息</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">尊贵版</div>
+                        <div class="box">
+                            <div class="img">
+                                <img src="/assets/icon/zg.png" alt="" srcset="">
+                            </div>
+                            <div class="text">
+                                <div>图文+在线课程,包含所有开店基础设置 </div>
+                                <div>98节基础推广教学视频</div>
+                                <div>对接2种精选货源渠道 </div>
+                                <div>PC端+无线端百种主题风格选择</div>
+                                <div>基础教学助您新店快速成长</div>
+                                <div>新手入门推广教学,轻松引流</div>
+                                <div>标题优化、上下架优化、产品结构优化</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info container">
+                    <div class="content-title">套餐购买人数展示</div>
+                    <div class="content">
+                        <div class="item">
+                            <div class="item-title">
+                                会员人数
+                            </div>
+                            <div>94000+</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                成功开店人数
+                            </div>
+                            <div>92000+</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-title">
+                                客户满意度
+                            </div>
+                            <div>98.8%</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class=" new">
+                <div class="title">
+                    <div class="title-top">成功案例 <span>干货分享 </span></div>
+                    <div class="title-sub">
+                        <span>拥有多年电商实战经验,专注电商创业孵化</span>
+                    </div>
+                </div>
+                <div class="content">
+                    <template v-for="(item,index) in 3 ">
+                        <div class="item">
+                            <div class="img">
+                                <img
+                                    src="http://www.guangyizhou.cn/uploads/file/20200715/04894fed87d0cef3513ebe210417ed98.jpg" />
+                            </div>
+                            <div class="new-title">广艺舟电商-淘宝店铺以爆款带动</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class=" contact">
+                <div class="nine-wrap">
+                    <div class="title">
+                        <div class="title-top">联系我们</div>
+                        <div class="title-sub">
+                            <span>开网店选广艺舟中国专业的电商服务平台</span>
+                            <span>让天下没有难开的店</span>
+                        </div>
+                        <div class="title-bottom"></div>
+                    </div>
+                    <div class="index-nine-content container">
+                        <div class="nine-icon">
+
+                            <div class="nine-icon-item">
+                                <div class="icon">
+                                    <img src="/assets/icon/lx1.png" alt="">
+                                </div>
+                                <div class="nine-title">我们的位置</div>
+                                <div class="nine-info">中国四川省成都市高新区蜀锦路88号</div>
+                            </div>
+                            <div class="nine-icon-item">
+                                <div class="icon"><img src="/assets/icon/lx2.png" alt=""></div>
+                                <div class="nine-title">联系我们</div>
+                                <div class="nine-info">400-0901-779</div>
+                            </div>
+                            <div class="nine-icon-item">
+                                <div class="icon"><img src="/assets/icon/lx3.png" alt=""></div>
+                                <div class="nine-title">电子邮件</div>
+                                <div class="nine-info">tousu@guangyizhou.cn</div>
+                            </div>
+                            <div class="nine-icon-item">
+                                <div class="icon"><img src="/assets/icon/lx4.png" alt=""></div>
+                                <div class="nine-title">服务时间</div>
+                                <div class="nine-info">09:00 - 24:00（全天7*15小时）</div>
+                            </div>
+                        </div>
+                        <div class="nine-form container">
+                            <input type="text" name="name" v-model="form.name" placeholder="姓名" />
+                            <input type="text" name="Email" v-model="form.mobile" placeholder="联系方式" />
+                            <textarea type="textarea" name="name" v-model="form.text" placeholder="请填写留言内容"></textarea>
+                            <button @click="submit">提交咨询</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-foot">
+            <div class="foot-wrap">
+                <div class="foot-one container">
+                    <div class="foot-content">
+                        <div class="foot-title">关于我们</div>
+                        <div class="foot-text">
+                            公司拥有一支有多年电商服务资深经验的管理团队和专业的服务团队，凭借多
+                            年积累的电商行业实践经验，致力于解决电商中小卖家的需求，为电商中小卖
+                            家提供一站式，系统化的服务方案。
+                            <br />
+                            <br />地址：中国四川省成都市高新区蜀锦路88号
+                            <br />版权所有 © 四川广艺舟科技有限公司 保留一切权利
+                            <br />网站备案： 蜀ICP备20010706号
+                            <br />
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">我们的服务</div>
+                        <div class="foot-text">
+                            <div>广艺舟开店技巧</div>
+                            <div>开店教学培训</div>
+                            <div>网店货源</div>
+                            <div>网店装修</div>
+                            <div>店铺美化</div>
+                        </div>
+                    </div>
+                    <div class="foot-content">
+                        <div class="foot-title">标签</div>
+                        <div class="foot-text">
+                            <span>培训</span>
+                            <span>网店</span>
+                            <span>视频</span>
+                            <span>一站式服务</span>
+                            <span>创业孵化</span>
+                            <span>电商</span>
+                            <span>装修</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="foot-two container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.use(window.VueAwesomeSwiper)
+        const app = new Vue({
+            el: '#app',
+            data: {
+                nav: "book",
+                new: [{ pic: '', title: '' }],
+                form: {
+                    mobile: null,
+                    name: '',
+                    text: ''
+                },
+            },
+            methods: {
+                async submit() {
+                    let { data } = await axios(window.url + '/api/Index/Leaving', {
+                        method: 'post',
+                        data: this.form
+                    })
+                    if (data.code) {
+                        alert(data.msg)
+                        this.form = {}
+                    }
+                },
+            }
+        })
+    </script>
+
+
+</html>

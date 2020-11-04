@@ -1,0 +1,434 @@
+html,
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+.container {
+  margin: auto 0.45rem;
+  overflow: hidden;
+}
+.container-fluid {
+  width: 100%;
+  overflow: hidden;
+}
+.van-icon.van-icon-cross,
+.van-icon.van-icon-wap-nav {
+  font-size: 0.46rem !important;
+}
+.nav a {
+  border-bottom: 1px solid #ccc;
+  line-height: 1.1rem;
+  font-size: 0.4rem;
+  padding: 0 0.4rem;
+  display: block;
+  color: inherit;
+  height: 1.1rem;
+}
+.nav a:last-child {
+  border-color: transparent;
+}
+img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  outline: none;
+  object-fit: contain;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+}
+.header .logo {
+  width: 1.92rem;
+  height: 0.52rem;
+  overflow: hidden;
+  position: relative;
+}
+.header .logo a {
+  text-decoration: none;
+  color: initial;
+  outline: 0;
+  border: none;
+}
+.header .logo img {
+  position: absolute;
+  border: none;
+}
+.header .menu {
+  font-size: 0.16rem;
+  flex: 1;
+  text-align: right;
+}
+.header .menu a {
+  display: inline-block;
+  text-decoration: none;
+  color: initial;
+  height: 100%;
+  margin-left: 10%;
+}
+.footer {
+  background-color: #030d17;
+  color: #808080;
+  padding: 0 0.45rem;
+  overflow: hidden;
+}
+.footer .link {
+  margin: 0.4rem auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.footer .link span {
+  margin: 0.1rem 0.2rem;
+  white-space: nowrap;
+  font-size: 0.3rem;
+}
+.footer .tel {
+  font-size: 0.3rem;
+  white-space: nowrap;
+}
+.footer .line {
+  background: #ccc;
+  margin: 0.4rem auto;
+  height: 1px;
+}
+.footer .copyright {
+  text-align: center;
+  font-size: 0.3rem;
+  white-space: nowrap;
+}
+.footer .foot-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+.footer .foot-two .icon {
+  margin: 0.1rem;
+  height: 0.6rem;
+  width: 0.5rem;
+  position: relative;
+}
+.footer .foot-two .icon img {
+  position: absolute;
+}
+.index .atitle {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #040000;
+  overflow: hidden;
+  margin: 0.8rem auto;
+}
+.index .atitle .main-title-sub {
+  color: #949494;
+  font-size: 0.36rem;
+  margin-top: 28px;
+}
+.index .atitle .main-title-bottom {
+  width: 2rem;
+  height: 0.02rem;
+  background: #dd5836;
+  margin: auto;
+  margin-top: 28px;
+}
+.index .one-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.index .one-wrap .one-content {
+  width: 4rem;
+  height: 4.6rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 0.03rem;
+  box-shadow: 0 0 0.1rem 0.05rem #eee;
+  margin: 0.26rem;
+}
+.index .one-wrap .one-content .index-one-icon {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: #fee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem auto 0;
+}
+.index .one-wrap .one-content .index-one-title {
+  margin-top: 0.25rem;
+  font-size: 0.36rem;
+}
+.index .one-wrap .one-content .index-one-sub {
+  margin-top: 0.2rem;
+  font-size: 0.28rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #859ba1;
+}
+.index .bga {
+  background-color: #fff;
+}
+.index .two-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.1rem;
+}
+.index .two-wrap .two-content {
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  color: #fff;
+}
+.index .two-wrap .two-content .index-two-icon {
+  font-size: 0.48rem;
+  font-weight: bold;
+}
+.index .two-wrap .two-content .index-two-title {
+  margin: 0.3rem 0;
+  font-size: 0.34rem;
+}
+.index .two-wrap .two-content .index-two-sub .a {
+  margin: 0.3rem 0;
+}
+.index .three-wrap {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 2%;
+}
+.index .three-wrap .three-content {
+  text-align: center;
+  color: #fff;
+  height: 3.5rem;
+}
+.index .three-wrap .three-content .index-three-icon {
+  margin: 0.4rem auto 0.15rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index .three-wrap .three-content .index-three-title {
+  font-size: 0.24rem;
+  margin: 0.2rem 0;
+}
+.index .three-wrap .three-content .index-three-sub {
+  font-size: 0.14rem;
+  text-align: center;
+  padding: 0 0.4rem;
+}
+.index .three-wrap .three-content .index-three-sub .a {
+  display: inline-block;
+  text-align: left;
+}
+.index .five-wrap {
+  overflow: hidden;
+}
+.index .five-wrap .five-wrap-item {
+  height: 400px;
+  border: 1px solid #eee;
+  background: #eee;
+  position: relative;
+  margin-bottom: 55px;
+}
+.index .five-wrap .five-wrap-item .five-wrap-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.index .five-wrap .five-wrap-item .five-wrap-pic img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+.index .five-wrap .five-wrap-item .five-info {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: #eb1763;
+  color: #fff;
+  text-align: center;
+}
+.index .five-wrap .five-wrap-item .five-info .five-title {
+  font-size: 22px;
+  line-height: 1.8;
+}
+.index .five-wrap .five-wrap-item .five-info .five-a {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.index .five-wrap .five-wrap-item .five-info .five-b {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.index .five-wrap .swiper-container {
+  padding: 0 0.5rem;
+}
+.index .five-wrap .swiper-slide {
+  transform: scale(0.6);
+  transition: all 0.3s;
+}
+.index .five-wrap .swiper-slide-active,
+.index .five-wrap .swiper-slide-duplicate-active {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.index .book {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.index .book .book-item {
+  width: 45%;
+  margin: 0.2rem;
+}
+.index .news .new-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  font-size: 0.28rem;
+  margin: 0.4rem auto;
+  overflow: hidden;
+}
+.index .news .new-item .news-img {
+  position: relative;
+  width: 48%;
+  margin: auto 0.2rem;
+}
+.index .news .new-item .news-img .date {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #dc3449;
+}
+.index .news .new-item .news-img .image {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100%;
+}
+.index .news .new-item .news-img .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  object-fit: cover;
+}
+.index .news .new-item .new-text {
+  width: 48%;
+}
+.index .news .new-item .new-text .title {
+  color: #040000;
+  font-size: 0.38rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 2;
+}
+.index .news .new-item .new-text .content {
+  height: 1.5rem;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.index .news .new-item .new-text .more {
+  color: #e33;
+  line-height: 3;
+}
+.about {
+  display: flex;
+  margin: 0.4rem auto;
+  justify-content: space-between;
+}
+.about .img {
+  width: 5rem;
+}
+.about .text {
+  width: 650px;
+  font-size: 20px;
+  line-height: 2;
+  margin-left: 0.4rem;
+}
+.about .text > div:first-child {
+  font-size: 0.24rem;
+  font-weight: bold;
+}
+.news {
+  min-height: 50vh;
+}
+.news .new-text .content {
+  line-height: 1.4;
+}
+.details {
+  min-height: 50vh;
+  font-size: 0.22rem;
+  border-top: 1px solid #ccc;
+}
+.details .main {
+  font-size: 0.36rem;
+  margin: 0.4rem auto;
+  text-align: center;
+}
+.details .subtitle {
+  width: 60%;
+  text-align: center;
+  margin: 0.4rem auto;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #eee;
+}
+.details .content {
+  padding: 2em;
+  min-height: 80vh;
+  text-indent: 2em;
+  background: #fff;
+  border-radius: 10px;
+}
+.details .content img {
+  max-width: 90%;
+}
+.details .info {
+  margin: 0.2rem auto;
+  font-size: 0.3rem;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details .tui {
+  min-height: 1rem;
+  font-size: 0.3rem;
+  border: 1px dashed #ccc;
+  margin: 0.4rem auto;
+  padding: 0.2rem;
+}
+.details .tui span {
+  padding: 0.2rem 0;
+}
+.details .tui a {
+  display: block;
+  font-size: 0.22rem;
+  color: inherit;
+  margin: 0.4rem;
+}

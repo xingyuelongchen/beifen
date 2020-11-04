@@ -1,0 +1,11 @@
+node_modules
+dist
+project-win32-x64
+Untitled01.nsi
+shouquan.txt
+guangyizhou-win32-x64
+广艺舟-win32-x64
+*.zip
+build
+*.exe*
+/project.*

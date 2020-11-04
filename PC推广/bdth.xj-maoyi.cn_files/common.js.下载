@@ -1,0 +1,37 @@
+//判断PC
+// function IsPC() {
+//   var userAgentInfo = navigator.userAgent;
+//   var Agents = ["Android", "iPhone",
+//               "SymbianOS", "Windows Phone",
+//               "iPad", "iPod"];
+//   var flag = true;
+//   for (var v = 0; v < Agents.length; v++) {
+//       if (userAgentInfo.indexOf(Agents[v]) > 0) {
+//           flag = false;
+//           break;
+//       }
+//   }
+//   return flag;
+// }
+
+var url = window.location.href;
+  var last = url.lastIndexOf('?');
+var key_work;
+if(last == -1){
+  key_work = '';
+}else{
+  key_work = url.substr(last,url.length);
+}
+if(document.cookie.indexOf("wapToPc")<0){
+	  if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|UCWEB|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+		  if(window.location.href.indexOf("?mobile")<0){
+			  try{
+				  if(/Android|webOS|iPhone|UCWEB|iPod|BlackBerry/i.test(navigator.userAgent)){
+					  window.location.href="wap/index.html"+key_work;
+				  }else{
+					  window.location.href="wap/index.html"+key_work;
+				  }
+			  }catch(e){}
+		  }
+	  }
+	}

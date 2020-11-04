@@ -1,0 +1,631 @@
+/**reset begin**/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+b,
+blockquote,
+th,
+td,
+button,
+section,
+address,
+nav,
+a,
+span,
+img,
+em {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-weight: normal;
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: inherit;
+    width: 100%;
+}
+
+fieldset,
+img {
+    display: block;
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure {
+    display: block;
+}
+
+img,
+input,
+*:onfouse {
+    outline: none;
+}
+
+input,
+select,
+button,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    tap-highlight-color: transparent;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+body {
+    font: 14px/24px Arial, 'Microsoft Yahei', 'PingFang SC', SimHei, SimSun;
+    background-color: #fff;
+    color: #000;
+}
+
+i,
+small {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+/**reset end**/
+
+/**global begin**/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.bgf5 {
+    background: #f5f5f5;
+}
+
+.clear::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.line-clamp {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.line-clamp-6 {
+    display: -webkit-box;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.layui-btn {
+    width: 130px;
+    background-color: #df5b38;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.pdd100 {
+    padding: 30px 0 100px 0;
+}
+
+.pdd150 {
+    padding: 50px 0 150px 0;
+}
+
+.pdt100 {
+    padding-bottom: 100px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.mt50 {
+    margin-top: 30px;
+}
+
+/**global end**/
+
+
+/**header begin**/
+
+header {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    width: 100%;
+    background: white;
+    z-index: 999;
+    top: 0;
+    -webkit-transform: translateZ(0);
+}
+
+header .container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    width: 1300px;
+    display: -webkit-box;
+}
+
+header .logo {
+    width: 170px;
+    height: inherit;
+    background: url(../images/logo.png) no-repeat center;
+}
+
+header .logo * {
+    display: block;
+    height: inherit;
+}
+
+header ul.layui-nav {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    background-color: transparent;
+    padding: 0 0 0 40px;
+    text-align: right;
+}
+
+header ul.layui-nav .layui-nav-item {
+    width: 100px;
+    line-height: 80px;
+    text-align: center;
+}
+
+header ul.layui-nav .layui-nav-item a {
+    font-size: 16px;
+    color: #000;
+    padding: 0;
+}
+
+header ul.layui-nav .layui-nav-item a:hover,
+header ul.layui-nav .layui-this a {
+    color: #df5b38;
+}
+
+header .layui-nav .layui-this {
+    color: #df5b38 !important;
+}
+
+header .layui-nav .layui-this:after {
+    bottom: 8px;
+    height: 2px;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    background: #df5b38;
+}
+
+header ul.layui-nav .layui-nav-item .layui-nav-child {
+    top: 80px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    line-height: 54px;
+    background-color: transparent;
+}
+
+header ul.layui-nav .layui-nav-item .layui-nav-child dd {
+    background-color: #fff;
+}
+
+header ul.layui-nav .layui-nav-item .layui-nav-child dd:not(:last-child) a {
+    margin-bottom: 1px;
+}
+
+header ul.layui-nav .layui-nav-item .layui-nav-child a:hover {
+    background-color: #df5b38;
+    color: #fff;
+}
+
+header ul.layui-nav .layui-nav-bar {
+    background-color: #df5b38;
+    height: 2px;
+    top: 70px !important;
+    max-width: 40px;
+    margin-left: 3%;
+}
+
+header ul.layui-nav .layui-nav-more {
+    right: 10px;
+    border-color: #b7b7b7 transparent transparent;
+    border-width: 4px;
+}
+
+header ul.layui-nav .layui-nav-mored {
+    border-color: transparent transparent #b7b7b7;
+}
+
+header ul.layui-nav .layui-nav-item.free a::before {
+    content: '\514d\8d39';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 12px;
+    line-height: 0;
+    color: #fff;
+    background-color: #df5b38;
+    padding: 8px 4px 9px;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+}
+
+header .sreach {
+    width: 142px;
+}
+
+header .layui-form-item {
+    margin-bottom: 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+header .layui-form-item .layui-input-inline {
+    margin-right: 0;
+    width: 100%;
+}
+
+header .sreach button {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 36px;
+    height: 36px;
+    background: url(../images/sreach_btn.png) no-repeat center top;
+}
+
+/**header end**/
+
+/*base title style begin*/
+.base_title {
+    width: 100%;
+    text-align: center;
+}
+
+.base_title img {
+    display: block;
+    margin: 0 auto;
+}
+
+.base_title p {
+    font-family: arial;
+    font-size: 14px;
+    color: #3d3d3d;
+    letter-spacing: 2px;
+    padding: 10px 0;
+}
+
+.base_title span {
+    font-size: 16px;
+    color: #a1a1a1;
+    padding: 10px 0 25px 0;
+    display: block;
+    letter-spacing: 2px;
+}
+
+/*base title style end*/
+
+
+/*footer style begin*/
+.footer {
+    width: 100%;
+    background: #4b4b4b;
+}
+
+.footer dl {
+    display: -webkit-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.footer dl dt {
+    display: block;
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+}
+
+.footer dl dt p {
+    display: block;
+    width: 100%;
+    background: url(../images/logo_bot.png) no-repeat left top;
+    height: 80px;
+    line-height: 90px;
+    color: #efefef;
+    font-size: 18px;
+    padding-left: 260px;
+}
+
+.footer dl dt a {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer dl dd {
+    display: block;
+    width: 240px;
+}
+
+.footer dl dd p {
+    display: block;
+    float: left;
+}
+
+.footer dl dd p img {
+    width: 94px;
+    height: 94px;
+    display: block;
+}
+
+.footer dl dd p span {
+    font-size: 14px;
+    color: white;
+    padding-top: 10px;
+    display: block;
+}
+
+.footer dl dd p:last-child {
+    float: right;
+}
+
+.foot {
+    background: #3e3e3e;
+    border-bottom: 1px solid #717171;
+    height: 64px;
+    line-height: 64px;
+    color: white;
+    font-size: 14px;
+}
+
+.foot p {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.foot p span {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.foot .online {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    display: block;
+    width: 94px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.foot .online:hover {
+    background: white;
+    border-color: white;
+    color: #000;
+}
+
+footer .bota {
+    text-align: center;
+}
+
+footer .bota a {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/*footer style end*/
+
+
+/**pagination begin**/
+
+#pagination {
+    text-align: center;
+}
+
+#pagination .layui-laypage {
+    margin: 50px 0;
+}
+
+#pagination .layui-laypage a:hover {
+    color: #df5b38;
+}
+
+#pagination .layui-laypage a,
+#pagination .layui-laypage span {
+    height: 38px;
+    line-height: 38px;
+}
+
+#pagination .layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #df5b38;
+}
+
+/**pagination end**/
+
+/*online style begin*/
+.online {
+    width: 60px;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 9999;
+}
+
+.online div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.online span {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.online p {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background: white;
+    width: 138px;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: #383838;
+    transition: all 0.3s;
+    display: none;
+}
+
+.online div:hover p {
+    display: block;
+}
+
+.online div:last-child {
+    cursor: pointer;
+}
+
+.online p:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 14px solid white;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: -14px;
+    top: 20px;
+}
+
+.online p img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.online p b {
+    font-size: 18px;
+    font-weight: bold;
+    color: #df5b38;
+    display: block;
+    padding: 5px 0;
+}
+
+/*online style end*/

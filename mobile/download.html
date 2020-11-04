@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广艺舟 app下载</title>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        let isAndroid = /(android)/.test(window.navigator.appVersion.toLocaleLowerCase())
+        function download(e) {
+            if (!isAndroid) {
+                document.querySelector('#download').href = "#"
+                alert('iOS版即将开放')
+            }
+            window.history.back()
+        }
+    </script>
+</head>
+
+<body onclick="download()">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <a href="http://www.guangyizhou.cn/public/gyz1_0_0.apk" id="download" download="download"
+        onclick="javascript:void(0);">
+        <img src="./assets/image/download.jpg" alt="" style="width: 100%;height:100%">
+    </a>
+
+</body>
+
+</html>
